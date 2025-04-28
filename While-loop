@@ -1,0 +1,21 @@
+import java.util.*;
+
+class GreetingRepeater {
+    Scanner input = new Scanner(System.in);
+    
+    void repeatGreeting() {
+        String userInput;
+        System.out.print("Type y to see the greeting, anything else to exit: ");
+        userInput = input.next();
+        while ("y".equals(userInput)) {
+            System.out.println("Welcome to Java Programming!");
+            System.out.print("Type y to see the greeting again, anything else to exit: ");
+            userInput = input.next();
+        }
+    }
+
+    public static void main(String[] args) {
+        GreetingRepeater greeter = new GreetingRepeater();
+        greeter.repeatGreeting();
+    }
+}
