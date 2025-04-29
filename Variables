@@ -1,0 +1,23 @@
+class InterestCalculator {
+    void calculateCompoundInterest() {
+        double amount;
+        double interestRate;  // percentage
+
+        amount = 5000.00;
+        System.out.println("Initial amount: " + amount);
+
+        interestRate = 5.0;
+        amount = amount * (100 + interestRate) / 100;
+        System.out.println("After 1 year: " + amount);
+
+        amount = amount * (100 + interestRate) / 100;
+        System.out.println("After 2 years: " + amount);
+
+        amount = amount * (100 + interestRate) / 100;
+        System.out.println("After 3 years: " + amount);
+    }
+
+    public static void main(String[] args) {
+        (new InterestCalculator()).calculateCompoundInterest();
+    }
+}
