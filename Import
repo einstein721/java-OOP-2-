@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class TravelInfo {
+    Scanner input = new Scanner(System.in);
+
+    public void collectCityAndVisits() {
+        String city;
+        int visits;
+
+        System.out.print("Enter your favorite city: ");
+        city = input.next();
+
+        System.out.print("How many times have you visited it? ");
+        visits = input.nextInt();
+
+        System.out.println("You’ve visited " + city + " " + visits + " times! Sounds amazing!");
+    }
+
+    public static void main(String[] args) {
+        (new TravelInfo()).collectCityAndVisits();
+    }
+}
