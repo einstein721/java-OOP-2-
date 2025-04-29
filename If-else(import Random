@@ -1,0 +1,33 @@
+import java.util.Random;
+
+public class SubscriptionChecker {
+
+    public static void main(String[] args) {
+        checkSubscriptionStatus();
+    }
+
+    public static void checkSubscriptionStatus() {
+        Random generator = new Random();
+        int daysLeft = generator.nextInt(12);  
+        int discount = 0;
+
+        System.out.println("Subscription status check: " + daysLeft + " day(s) remaining.");
+
+        if (daysLeft < 1) {
+            System.out.println("Oops! Your subscription has ended.");
+        } else if (daysLeft == 1) {
+            discount = 20;
+            System.out.println("Your subscription ends tomorrow!");
+            System.out.println("Renew today and get " + discount + "% off!");
+        } else if (daysLeft <= 5) {
+            discount = 10;
+            System.out.println("Only " + daysLeft + " days left on your subscription.");
+            System.out.println("Act fast and save " + discount + "% when you renew!");
+        } else if (daysLeft <= 10) {
+            System.out.println("Your subscription is valid for " + daysLeft + " more days.");
+            System.out.println("Don't wait too long — consider renewing soon.");
+        } else {
+            System.out.println("You're all set! No need to worry about renewing yet.");
+        }
+    }
+}
