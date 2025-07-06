@@ -1,0 +1,27 @@
+import java.io.*;
+
+class ArithmeticJava {
+    public static void main(String[] args) {
+        int number1 = 100;
+        int number2 = 0;
+
+        try {
+            // Attempt to divide number1 by number2
+            int answer = number1 / number2;
+            System.out.println("Answer: " + answer);
+
+        } catch (ArithmeticException e) {
+            // Catching division by zero error
+            System.out.println("Error: Division by zero is not allowed.");
+            System.out.println("Exception Message: " + e.getMessage());
+
+        } catch (Exception e) {
+            // General exception handling (in case of unexpected exceptions)
+            System.out.println("An unexpected error occurred: " + e.getMessage());
+
+        } finally {
+            // This block always executes, regardless of whether an exception occurred
+            System.out.println("Execution completed.");
+        }
+    }
+}
