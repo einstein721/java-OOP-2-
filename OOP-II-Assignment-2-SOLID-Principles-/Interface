@@ -1,0 +1,35 @@
+public interface Human {
+    public void getName();
+    public void sleep();
+    public void eat();
+}
+
+package Interface;
+import java.util.Scanner;
+public class Woman implements Human{
+    Scanner sc = new Scanner(System.in);
+    public String name;
+    public String food;
+    public void getName(){
+        System.out.println("Enter name: ");
+        String name = sc.next();
+        System.out.println("Her name is: " + name);
+    }
+    public void sleep() {
+        System.out.println("She sleeps regularly");
+    }
+    public void eat() {
+        System.out.println("What does she eat? ");
+        String food = sc.next();
+        System.out.println("She eats " + food);
+    }
+
+    public static void main(String[] args) {
+        Woman woman1 = new Woman();
+        woman1.getName();;
+        woman1.eat();
+        woman1.sleep();
+    }
+}
+
+
